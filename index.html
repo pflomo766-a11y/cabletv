@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable TV 2011 Emulator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Display -->
+        <div class="display-section">
+            <div class="tv-bezel">
+                <div class="screen">
+                    <!-- Video Player -->
+                    <video id="videoPlayer" class="video-player" controls>
+                        <p>Your browser does not support the video tag.</p>
+                    </video>
+
+                    <!-- Channel Info Overlay -->
+                    <div id="channelInfo" class="channel-info">
+                        <div class="channel-number" id="channelNumber">1</div>
+                        <div class="channel-name" id="channelName">Loading...</div>
+                        <div class="channel-status" id="channelStatus">Initializing...</div>
+                    </div>
+
+                    <!-- Loading Indicator -->
+                    <div id="loadingSpinner" class="loading-spinner">
+                        <div class="spinner"></div>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="error-message"></div>
+                </div>
+
+                <!-- LED Indicators -->
+                <div class="led-panel">
+                    <div class="led-light" id="powerLed">
+                        <span class="led-dot power-on"></span>
+                        <span class="led-label">POWER</span>
+                    </div>
+                    <div class="led-light" id="volumeLed">
+                        <span class="led-dot"></span>
+                        <span class="led-label">VOLUME</span>
+                    </div>
+                    <div class="led-light" id="muteIndicator">
+                        <span class="led-dot"></span>
+                        <span class="led-label">MUTE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <!-- Number Pad -->
+                <div class="number-pad">
+                    <button class="num-btn" data-channel="1">1</button>
+                    <button class="num-btn" data-channel="2">2</button>
+                    <button class="num-btn" data-channel="3">3</button>
+                    <button class="num-btn" data-channel="4">4</button>
+                    <button class="num-btn" data-channel="5">5</button>
+                    <button class="num-btn" data-channel="6">6</button>
+                    <button class="num-btn" data-channel="7">7</button>
+                    <button class="num-btn" data-channel="8">8</button>
+                    <button class="num-btn" data-channel="9">9</button>
+                    <button class="num-btn" data-channel="0">0</button>
+                    <button id="clearBtn" class="num-btn clear-btn">C</button>
+                    <button id="enterBtn" class="num-btn enter-btn">ENTER</button>
+                </div>
+
+                <!-- Arrow Pad -->
+                <div class="arrow-pad">
+                    <button id="upBtn" class="arrow-btn up">▲</button>
+                    <div class="middle-row">
+                        <button id="leftBtn" class="arrow-btn left">◄</button>
+                        <button id="selectBtn" class="arrow-btn select">OK</button>
+                        <button id="rightBtn" class="arrow-btn right">►</button>
+                    </div>
+                    <button id="downBtn" class="arrow-btn down">▼</button>
+                </div>
+
+                <!-- Media Controls -->
+                <div class="media-controls">
+                    <button id="playBtn" class="media-btn">▶ PLAY</button>
+                    <button id="pauseBtn" class="media-btn">⏸ PAUSE</button>
+                    <button id="stopBtn" class="media-btn">⏹ STOP</button>
+                </div>
+
+                <!-- Volume & Settings -->
+                <div class="settings-controls">
+                    <div class="control-group">
+                        <label>Volume:</label>
+                        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                        <span id="volumeValue">50%</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Brightness:</label>
+                        <input type="range" id="brightnessSlider" min="0" max="100" value="100">
+                        <span id="brightnessValue">100%</span>
+                    </div>
+                    <button id="muteBtn" class="control-btn mute-btn">🔊 MUTE</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar - Channel List & Info -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>CHANNEL GUIDE</h2>
+                <div class="search-box">
+                    <input type="text" id="searchChannels" placeholder="Search channels...">
+                </div>
+            </div>
+
+            <div class="channel-list" id="channelList">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="info-panel">
+                    <h3>Current Channel</h3>
+                    <div id="sidebarChannelInfo">
+                        <p>No channel selected</p>
+                    </div>
+                </div>
+
+                <div class="import-section">
+                    <h3>Import Playlist</h3>
+                    <input type="file" id="playlistFile" accept=".m3u,.m3u8">
+                    <input type="text" id="playlistUrl" placeholder="Or paste URL...">
+                    <button id="loadPlaylistBtn" class="action-btn">Load Playlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/channels.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/remote.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
