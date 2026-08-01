@@ -1,0 +1,14 @@
+{
+  "channels": [
+    {"number": 1, "name": "NBC", "category": "Broadcast", "url": "https://example.com/streams/nbc.m3u8"},
+    {"number": 2, "name": "ABC", "category": "Broadcast", "url": "https://example.com/streams/abc.m3u8"},
+    {"number": 3, "name": "CBS", "category": "Broadcast", "url": "https://example.com/streams/cbs.m3u8"},
+    {"number": 4, "name": "FOX", "category": "Broadcast", "url": "https://example.com/streams/fox.m3u8"},
+    {"number": 5, "name": "HBO", "category": "Premium", "url": "https://example.com/streams/hbo.m3u8"},
+    {"number": 6, "name": "CNN", "category": "News", "url": "https://example.com/streams/cnn.m3u8"},
+    {"number": 7, "name": "MSNBC", "category": "News", "url": "https://example.com/streams/msnbc.m3u8"},
+    {"number": 8, "name": "ESPN", "category": "Sports", "url": "https://example.com/streams/espn.m3u8"},
+    {"number": 9, "name": "TNT", "category": "Cable", "url": "https://example.com/streams/tnt.m3u8"},
+    {"number": 10, "name": "TBS", "category": "Cable", "url": "https://example.com/streams/tbs.m3u8"}
+  ]
+}

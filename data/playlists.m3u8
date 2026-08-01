@@ -1,0 +1,19 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
+
+#EXTINF:-1 tvg-id="1" tvg-name="NBC" tvg-logo="",NBC
+https://example.com/streams/nbc/master.m3u8
+
+#EXTINF:-1 tvg-id="2" tvg-name="ABC" tvg-logo="",ABC
+https://example.com/streams/abc/master.m3u8
+
+#EXTINF:-1 tvg-id="3" tvg-name="CBS" tvg-logo="",CBS
+https://example.com/streams/cbs/master.m3u8
+
+#EXTINF:-1 tvg-id="4" tvg-name="FOX" tvg-logo="",FOX
+https://example.com/streams/fox/master.m3u8
+
+#EXTINF:-1 tvg-id="5" tvg-name="HBO" tvg-logo="",HBO
+https://example.com/streams/hbo/master.m3u8

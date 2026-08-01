@@ -1,0 +1,16 @@
+node_modules/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.log
+npm-debug.log*
+dist/
+build/
+local.m3u8
+local-playlists/
+*.temp
+.env
+.env.local
